@@ -1,3 +1,11 @@
 package org.example.articlekotlin
 
-data class Article()
+import java.time.LocalDateTime
+
+data class Article(
+        val title : String,
+        val content : String?
+        val createdAt: LocalDateTime = LocalDateTime.now(),
+        val slug = title.toSlug()
+)
+
